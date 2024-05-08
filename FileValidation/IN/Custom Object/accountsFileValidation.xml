@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRules>
+    <nativeIdentity>
+        <Validation key="DataType" value="String(50)" ErrorMessage="Data Type or length error"/>
+        <Validation key="Mandatory" value="Y" ErrorMessage="Mandatory nativeIdentity Missing"/>
+        <Validation key="format_regex" value="" ErrorMessage="nativeIdentity is invalid"/>
+    </nativeIdentity>
+    <emailId>
+        <Validation key="DataType" value="String(50)" ErrorMessage="Data Type or length error"/>
+        <Validation key="Mandatory" value="Y" ErrorMessage="Mandatory EmailId Missing"/>
+        <Validation key="format_regex" value='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' ErrorMessage="Email is not in Correct Format"/>
+        <Validation key="API" value='https://partner101.api.identitynow.com/v3/public-identities?filters=email $matchCondition$ "$emailId$"' ErrorMessage="Email is not a valid value" matchCondition="eq" matchValue="1" testResultPass="True"/>
+    </emailId>
+    <entitlement_name>
+        <Validation key="DataType" value="String(50)" ErrorMessage="Data Type or length error"/>
+        <Validation key="Mandatory" value="Y" ErrorMessage="Mandatory entitlement_name is missing"/>
+        <Validation key="format_regex" value="" ErrorMessage="entitlement_name is invalid"/>
+    </entitlement_name>
+    <application>
+        <Validation key="DataType" value="String(50)" ErrorMessage="Data Type or length error"/>
+        <Validation key="Mandatory" value="Y" ErrorMessage="Mandatory entitlement_name Missing"/>
+        <Validation key="format_regex" value="" ErrorMessage="application is invalid"/>
+    </application>
+    <!-- Add more validation rules if needed -->
+</ValidationRules>
+

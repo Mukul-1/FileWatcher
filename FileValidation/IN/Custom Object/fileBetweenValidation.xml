@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRules>
+    <FileSql_1>
+        <Validation key="FileSQL.PassMessage" value="Validation Success: Accounts File entitlement_name matches with Entitlements file"/>
+        <Validation key="FileSQL.SQL" value="SELECT count(entitlement_name) from [$accountsFileName$] WHERE entitlement_name NOT IN (SELECT entitlement_name FROM [$entitlementsFileName$])"/>
+        <Validation key="FileSQL.failMessage" value="Validation Failed: Accounts File entitlement_name does not matches with Entitlements file"/>
+        <Validation key="FileSQL.match" value="eq"/>
+        <Validation key="FileSQL.matchValue" value="0"/>
+        <Validation key="FileSQL.testResultPass" value="true"/>
+    </FileSql_1>
+    <!-- Add more validation rules if needed -->
+</ValidationRules>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRules>
+    <entitlement_description>
+        <Validation key="DataType" value="String(50)" ErrorMessage="This field is required."/>
+        <Validationkey key="Mandatory" value="Y" ErrorMessage="Only numeric values are allowed."/>
+        <Validation key="format_regex" value="" ErrorMessage="entitlement_description is invalid."/>
+    </entitlement_description>
+    <entitlement_name>
+        <Validation key="DataType" value="String(50)" ErrorMessage="This field is required."/>
+        <Validationkey key="Mandatory" value="Y" ErrorMessage="Only numeric values are allowed."/>
+        <Validation key="format_regex" value="" ErrorMessage="entitlement_name is invalid."/>
+    </entitlement_name>
+    <!-- Add more validation rules if needed -->
+</ValidationRules>
+
